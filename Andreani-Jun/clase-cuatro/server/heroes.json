@@ -1,0 +1,13 @@
+{
+  "heroes": [
+    {
+      "nombre": "Tony",
+      "hp": 99842,
+      "xp": 293,
+      "level": 1,
+      "alive": true,
+      "stats": [],
+      "id": 1
+    }
+  ]
+}
