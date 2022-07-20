@@ -1,17 +1,28 @@
 require("dotenv").config();
-var express = require("express");
-var cors = require("cors");
+const express = require("express");
+const cors = require("cors");
 
 if (!process.env.PORT) {throw Error("Missing Argument PORT in .env")}
 
 const PORT = process.env.PORT;
 
-//console.log(express);
-//TIP: console.log(express.constructor.name);
-
-var app = express();
+const app = express();
 app.use(cors());
 
+//TODO: Proximamente sale de una base de mongo
+let tareas  = [
+    {id:1, nombre:"Hacer el marketplace", done:false},
+    {id:2, nombre:"Grafico vectorial con SVG", done:false},
+    {id:3, nombre:"Testing de la aplicacion con mocha", done:false}
+];
+
+app.get("/tarea", (req,res)=>{
+   res.send(tareas);
+});
+//Es lo mismo...
+/*app.get("/tarea", function(req,res){
+    res.send(tareas);
+});*/
 
 
 //express se le podria haber ocurrio app.get("/").then(()=>{...})  promise Style...
