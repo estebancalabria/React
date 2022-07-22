@@ -19,6 +19,11 @@ let tareas  = [
 app.get("/tarea", (req,res)=>{
    res.send(tareas);
 });
+
+app.post("/tarea", (req,res)=>{
+    console.log("Voy a agregar una tarea al backend");
+    res.send("OK");
+})
 //Es lo mismo...
 /*app.get("/tarea", function(req,res){
     res.send(tareas);
