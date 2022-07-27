@@ -19,8 +19,6 @@ class AddTodo extends Component {
 
     render(){
         return (<div className="input-group">
-            {this.state.nombreTarea}
-            
             <input className="form-control" type="text" 
                    placeholder="Ingrese nueva tarea"
                    onChange={(evt)=>{ 
@@ -28,7 +26,7 @@ class AddTodo extends Component {
                    }} />
 
             <button className="btn btn-outline-success" onClick={()=>{
-                alert("Click Boton");
+                this.props.onAddTarea(this.state.nombreTarea)
             }}>
                 +
             </button>

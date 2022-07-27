@@ -12,7 +12,9 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "redux": "^4.2.0",
+    "react-redux": "^8.0.2"
   },
   "scripts": {
     "start": "react-dotenv && react-scripts start",

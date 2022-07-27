@@ -1,16 +1,26 @@
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import { useEffect, useState } from "react";
-import AddTodo from "./components/AddTodo";
-import Cabecera from "./components/Cabecera";
-import TodoList from "./components/TodoList";
-import URLS from "./init/URLS";
 
-let defaultTareas = [
-  {id:1, nombre:"Tarea Uno", done:false},
-  {id:2, nombre:"Tarea Dos", done:false},
-  {id:3, nombre:"Tarea Tres", done:false},
-];
+//Bilardo mete cambiaso...
+import AddTodo from "./containers/AddTodo";
+//import AddTodo from "./components/AddTodo";
+
+import Cabecera from "./components/Cabecera";
+
+//Bilardo mete cambio...
+//import TodoList from "./components/TodoList";
+import TodoList from "./containers/TodoList";
+
+import URLS from "./init/URLS";
+import { Provider } from "react-redux";
+import theOnlySourceOfTruth from "./store/store";
+
+/*let defaultTareas = [
+  { id: 1, nombre: "Tarea Uno", done: false },
+  { id: 2, nombre: "Tarea Dos", done: false },
+  { id: 3, nombre: "Tarea Tres", done: false },
+];*/
 
 //let app = new App();
 function App() {
@@ -21,18 +31,18 @@ function App() {
   //juan = arreglo[0];
   //pedro = arreglo[1];
   const [titulo, setTitulo] = useState("Titulo No Definido"); //I18N
-  const [tareas, setTareas] = useState(defaultTareas);  //useState >> refresh
+  //const [tareas, setTareas] = useState(defaultTareas);  //useState >> refresh
 
-  useEffect( ()=>{
+  useEffect(() => {
     //fetch(url, ()=>{}) callbackStyle
-    
+
     /*fetch(URLS.URL_LEYENDAS)
       .then((resp)=>(resp.json()))  //Funcion flecha ()=>() con el return implicito
       //.then((resp)=>{return resp.json()})
       .then((data)=>{
         setTitulo(data.titulo);
       });   //En este caso ()=>{} el return lo tengo que hacer explicito*/
-    
+
     //fetch(...).then(..).catch(..)
 
     /*async function doIt(){
@@ -50,22 +60,45 @@ function App() {
       setTitulo(resp.data.titulo);
     });*/
 
+    //TODO: No quiero por ahora usar mi backed
+    /*
     (async function(){
       var resp = await axios.get(URLS.URL_LEYENDAS);
       setTitulo(resp.data.titulo);
     })(); //IIFE : Inmediate Invoked Function Expresion
 
     axios.get(URLS.URL_TAREAS).then((resp)=>{ setTareas(resp.data) });
-  },[]);
+    */
+  }, []);
 
   return (
-    <div>
-       <Cabecera titulo={titulo} />
-       <main className="container w-50">
-          <TodoList tareas={tareas}/>    
-          <AddTodo />    
-       </main>
-    </div>
+    <Provider store={theOnlySourceOfTruth}>
+      <Cabecera titulo={titulo} />
+      <main className="container w-50">
+        {
+           //Saco las props<TodoList tareas={tareas} />
+        }
+        <TodoList />
+        <AddTodo />
+        {/*
+        <AddTodo onAddTarea={(nueva) => {
+          /*if (nueva.length > 0) {
+            let tareaNueva = {
+              //TODO:Que el backend genere el ID
+              id: Math.max(...tareas.map(t => t.id), 0) + 1,
+              nombre: nueva,
+              done: false
+            }
+            axios.post(URLS.URL_TAREAS, tareaNueva).then((resp) => {
+              this.setTareas([...tareas, tareaNueva]);
+            }).catch((err) => {
+              alert(JSON.stringify(err.response.data));
+            });
+          }
+        }} />
+        */}
+      </main>
+    </Provider>
   );
 }
 
