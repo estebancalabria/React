@@ -73,7 +73,7 @@ app.post("/tarea", (req, res) => {
         return;
     }
 
-    if (!tarea.donw) {
+    if (!tarea.done) {
         res.statusCode = 500;
         res.send({ result: "error", message: "falta el done" });
         return;
