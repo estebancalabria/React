@@ -21,12 +21,14 @@ class AddTodo extends Component {
         return (<div className="input-group">
             <input className="form-control" type="text" 
                    placeholder="Ingrese nueva tarea"
+                   value={this.state.nombreTarea}
                    onChange={(evt)=>{ 
                       this.setState({nombreTarea : evt.target.value})
                    }} />
 
             <button className="btn btn-outline-success" onClick={()=>{
                 this.props.onAddTarea(this.state.nombreTarea)
+                this.setState({nombreTarea:''})
             }}>
                 +
             </button>

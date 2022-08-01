@@ -10,15 +10,19 @@ function mapStateToProps(state){
 
 //El dispatch es la funcion que hace llegar una accion al reducer
 function mapDispatchToProps(dispatch){
+
+
     return {
         onAddTarea : (nueva) =>{
-            dispatch({
+            let accion = {
                 type : ACT_ADD_TODO,
                 payload : {
                     nombre : nueva,
                     done : false
                 }
-            })
+            };
+
+            dispatch(accion);
         }
     }
 }

@@ -16,6 +16,15 @@ import URLS from "./init/URLS";
 import { Provider } from "react-redux";
 import theOnlySourceOfTruth from "./store/store";
 
+//Ejemplo de uso del High Order Component
+//import red from "./hoc/red";
+/*import TablaChild from "./components/Tabla";
+import background from "./hoc/background";
+//const Tabla = background("green",TablaChild);
+const Tabla = background("green")(TablaChild);*/
+import Tabla from "./containers/Tabla";
+
+
 /*let defaultTareas = [
   { id: 1, nombre: "Tarea Uno", done: false },
   { id: 2, nombre: "Tarea Dos", done: false },
@@ -76,10 +85,12 @@ function App() {
       <Cabecera titulo={titulo} />
       <main className="container w-50">
         {
-           //Saco las props<TodoList tareas={tareas} />
+          //Saco las props<TodoList tareas={tareas} />
         }
         <TodoList />
         <AddTodo />
+        <hr />
+        <Tabla  />
         {/*
         <AddTodo onAddTarea={(nueva) => {
           /*if (nueva.length > 0) {
