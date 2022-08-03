@@ -1,0 +1,36 @@
+Workshop Contador con Redux
+
+Crear el proyecto
+
+Crear componentes en /components
+Contador
+props : valor
+Incrementar
+props : onIncrementar, valor
+Decrementar
+props : onIncrementar, valor
+
+Modificar el App.js para que muestre dichos componentes
+
+Instalar librerias de redux
+
+Crear el Store con en /store/strore.js
+{  value : 1}
+El reducer (s,a)=>(s)
+
+Crear las acciones /actions/action-types.js
+ACT_INCREMENTAR
+ACT_DECREMENTAR
+
+Crear el reducer /reducer/counterReducer.js
+Que tenga un switch que actualice el estado
+
+Configurar el store para que use el reducer
+
+Configurar los containers para que mapeen las propiedades
+Contador
+Incrementar
+Decrementar
+
+
+Probar la aplicacion

@@ -1,0 +1,3 @@
+
+export const ACT_INCREMENTAR = 'ACT_INCREMENTAR';
+export const ACT_DECREMENTAR = 'ACT_DECREMENTAR';
