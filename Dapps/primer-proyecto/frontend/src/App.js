@@ -23,6 +23,8 @@ import background from "./hoc/background";
 //const Tabla = background("green",TablaChild);
 const Tabla = background("green")(TablaChild);*/
 import Tabla from "./containers/Tabla";
+import Updater from "./components/Updater";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
 
 /*let defaultTareas = [
@@ -65,9 +67,9 @@ function App() {
     }
     doIt();*/
 
-    /*axios.get(URLS.URL_LEYENDAS).then((resp)=>{
+    axios.get(URLS.URL_LEYENDAS).then((resp) => {
       setTitulo(resp.data.titulo);
-    });*/
+    });
 
     //TODO: No quiero por ahora usar mi backed
     /*
@@ -81,17 +83,33 @@ function App() {
   }, []);
 
   return (
-    <Provider store={theOnlySourceOfTruth}>
-      <Cabecera titulo={titulo} />
-      <main className="container w-50">
-        {
-          //Saco las props<TodoList tareas={tareas} />
-        }
-        <TodoList />
-        <AddTodo />
-        <hr />
-        <Tabla  />
-        {/*
+    <BrowserRouter>
+      <Provider store={theOnlySourceOfTruth}>
+        <Updater />
+        <Cabecera titulo={titulo} />
+
+        <nav className="mb-2">
+          <ul className="nav bg-dark">
+            <li className="nav-item"><Link className="nav-link" to="">Tareas</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/reporte">Reporte</Link></li>
+          </ul>
+        </nav>
+
+        <main className="container w-50">
+          {
+            //Saco las props<TodoList tareas={tareas} />
+          }
+          <Routes>
+            <Route path="" element={<>
+              <TodoList />
+              <AddTodo />
+            </>} />
+            <Route path="/reporte" element={<Tabla />} />
+          </Routes>
+
+          <hr />
+          
+          {/*
         <AddTodo onAddTarea={(nueva) => {
           /*if (nueva.length > 0) {
             let tareaNueva = {
@@ -108,8 +126,9 @@ function App() {
           }
         }} />
         */}
-      </main>
-    </Provider>
+        </main>
+      </Provider>
+    </BrowserRouter>
   );
 }
 

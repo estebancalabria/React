@@ -6,11 +6,13 @@ export default function reducer(state, action){
     let newState = {...state};
     switch (action.type) {
         case Actions.ACT_ADD_TODO:
-            const nuevaAccion = {
-                id : Math.max(...state.tareas.map(t=>t.id),0) + 1,
-                ...action.payload
+            if (action.payload.nombre.length>0){
+                const nuevaAccion = {
+                    id : Math.max(...state.tareas.map(t=>t.id),0) + 1,
+                    ...action.payload
+                }
+                newState.tareas = [...newState.tareas, nuevaAccion];
             }
-            newState.tareas = [...newState.tareas, nuevaAccion];
             break;
 
        case Actions.ACT_INIT_TODO:
