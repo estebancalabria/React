@@ -1,0 +1,2 @@
+
+export const INIT_PERSONAS = "INIT_PERSONAS";

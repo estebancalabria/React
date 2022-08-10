@@ -1,0 +1,34 @@
+{
+    "personas": [
+        {
+            "id": 1,
+            "nombre": "Esteban",
+            "apellido": "Calabria",
+            "profesion": "Docente"
+        },
+        {
+            "id": 2,
+            "nombre": "Nicolas",
+            "apellido": "Grad",
+            "profesion": "Programador"
+        },
+        {
+            "id": 3,
+            "nombre": "Carmen",
+            "apellido": "Ferreyra",
+            "profesion": "Programadora"
+        },
+        {
+            "id": 4,
+            "nombre": "Juan Pablo",
+            "apellido": "Lassala",
+            "profesion": "Programador back end"
+        },
+        {
+            "id": 5,
+            "nombre": "Jonathan",
+            "apellido": "Morales",
+            "profesion": "Developer"
+        }
+    ]
+}
