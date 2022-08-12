@@ -27,8 +27,8 @@ const Singup = (props:SingupProps) => {
             setNombre(input.value);
         }} />
 
-        <label>Usuario:</label>
-        <input className="form-control" type="text" onChange={(e) => {
+        <label>Correo:</label>
+        <input className="form-control" type="email" onChange={(e) => {
             setUsuario((e.target as HTMLInputElement).value);
         }} />
 
@@ -42,7 +42,7 @@ const Singup = (props:SingupProps) => {
             setRePassword((e.target as HTMLInputElement).value);
         }} />
 
-        <button type="button" className="btn btn-success w-100" onClick={() => {
+        <button type="button" className="btn btn-success w-100 mt-2" onClick={() => {
             let registro: Registro = new Registro(nombre, usuario, password, rePassword);
             //let registro: Registro = {nombre, usuario, password, rePassword};
             //let registro: Registro = {nombre:nombre, usuario:usuario, password: password, rePassword:rePassword};

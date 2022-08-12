@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "email": "demo@gmail.com",
+      "password": "$2a$10$CrsNRfBY4f28HhQ08ShpUuZB0v4.0e75XL.rlddI0HzWiQhq5FpCK",
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$6yWv0XZbhoknOa9NRIQbh.ZVNFCETSTurJNHsUR7KvEOalPHNZfVq",
+      "id": 2
+    }
+  ],
+  "tareas": [
+    {
+      "id": 1,
+      "nombre": "Implementar subasta",
+      "done": false
+    },
+    {
+      "id": 2,
+      "nombre": "Implemenetar stripe de pagos",
+      "done": false
+    },
+    {
+      "id": 3,
+      "nombre": "Crear una nueva pagina",
+      "done": false
+    },
+    {
+      "nombre": "Documentar Contatos",
+      "done": false,
+      "id": 4
+    }
+  ]
+}
