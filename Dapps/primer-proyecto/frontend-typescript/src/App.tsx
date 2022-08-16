@@ -2,8 +2,8 @@
 import "bootstrap/dist/css/bootstrap.css"
 //react
 import { useState } from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import SessionContext, { ISessionContext } from "./context/SessionContext";
+import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom";
+import SessionContext from "./context/SessionContext";
 //Componentes
 //import Singup from "./components/Singup";
 import Singup from "./containers/Singup.container";
@@ -12,10 +12,14 @@ import UserInfo from "./components/UserInfo";
 import Login from "./containers/Login.container";
 import Tareas from "./components/Tareas";
 import Authorize from "./components/Authorize";
+import Rutas from "./urls/routes";
+import { AuthService } from "./services/auth.service";
+import Home from "./components/Home";
+import Anonymous from "./components/Anonymous";
 
 function App() {
   
-  const [usuario, setUsuario] = useState<string|null>(null)
+  const [usuario, setUsuario] = useState<string|null>(null);
 
   return (
     <BrowserRouter>
@@ -25,18 +29,36 @@ function App() {
         <UserInfo />
         <nav>
           <ul className="nav bg-dark">
-            <li className="nav-link"><Link className="nav-item" to="/">Home</Link></li>
-            <li className="nav-link"><Link className="nav-item" to="/tareas">Tareas</Link></li>
-            <li className="nav-link"><Link className="nav-item" to="/reportes">Reportes</Link></li>
-            <li className="nav-link"><Link className="nav-item" to="/login">Login</Link></li>
-            <li className="nav-link"><Link className="nav-item" to="/signup">Singup</Link></li>
+            <li className="nav-link"><Link className="nav-item" to={Rutas.HOME}>Home</Link></li>
+            <li className="nav-link"><Link className="nav-item" to={Rutas.TAREAS}>Tareas</Link></li>
+            <li className="nav-link"><Link className="nav-item" to={Rutas.REPORTES}>Reportes</Link></li>
+            <Anonymous>
+              <li className="nav-link"><Link className="nav-item" to={Rutas.LOGIN}>Login</Link></li>
+            </Anonymous>
+            <Anonymous>
+              <li className="nav-link"><Link className="nav-item" to={Rutas.SINGUP}>Singup</Link></li>
+            </Anonymous>
+
+            <Authorize>
+              <li className="nav-link">
+                <Link className="nav-item" 
+                  to={Rutas.HOME}
+                  onClick={()=>{
+                    const service : AuthService = new AuthService();
+                    service.logout();
+                  }}>
+                  Logout
+                </Link>
+              </li>
+            </Authorize>
           </ul>
         </nav>
-        <main>
+        <main className="container mt-2">
           <Routes>
-            <Route path="/signup" element={ <Singup  /> } />
-            <Route path="/login" element={<Login />} />
-            <Route path="/tareas" element={<Authorize><Tareas /></Authorize>} />
+            <Route path={Rutas.HOME} element={<Home />} />
+            <Route path={Rutas.SINGUP} element={ <Singup  /> } />
+            <Route path={Rutas.LOGIN} element={<Login />} />
+            <Route path={Rutas.TAREAS} element={<Authorize><Tareas /></Authorize>} />
           </Routes>
         </main>
       </SessionContext.Provider>
@@ -45,3 +67,4 @@ function App() {
 }
 
 export default App;
+
