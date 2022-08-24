@@ -1,6 +1,9 @@
 import axios from "axios";
 import { LoginResponse } from "../dto/LoginResponse";
 import Registro from "../models/Registro";
+import { useContext } from "react";
+import SessionContext from "../context/SessionContext";
+import { isContext } from "vm";
 
 const LOGIN_URL = "http://localhost:3001/login";
 const SINGUP_URL = "http://localhost:3001/register";

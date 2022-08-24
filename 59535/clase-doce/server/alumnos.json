@@ -1,0 +1,52 @@
+{
+  "alumnos": [
+    {
+      "id": 1,
+      "nombre": "Leonard",
+      "apellido": "Amaya",
+      "profesion": "Programador"
+    },
+    {
+      "id": 2,
+      "nombre": "Ariel",
+      "apellido": "Fernandez",
+      "profesion": "DBA"
+    },
+    {
+      "id": 3,
+      "nombre": "Javier",
+      "apellido": "Bergaglio",
+      "profesion": "Lic en Sistemas"
+    },
+    {
+      "nombre": "Esteban",
+      "apellido": "Calabria",
+      "profesion": "Pepe",
+      "id": 4
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "profesion": "Ingeniero",
+      "id": 5
+    },
+    {
+      "nombre": "Elon",
+      "apellido": "Musk",
+      "profesion": "Multimillonario",
+      "id": 6
+    },
+    {
+      "nombre": "Javier",
+      "apellido": "Bergaglio",
+      "profesion": "Lic en Sistemas",
+      "id": 7
+    },
+    {
+      "nombre": "Juankdfjlsdkfjd",
+      "apellido": "Perez",
+      "profesion": "Ingeniero",
+      "id": 8
+    }
+  ]
+}
