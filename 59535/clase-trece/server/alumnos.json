@@ -1,0 +1,28 @@
+{
+  "alumnos": [
+    {
+      "id": 2,
+      "nombre": "Ariel",
+      "apellido": "Fernandez",
+      "profesion": "DBA"
+    },
+    {
+      "nombre": "Esteban",
+      "apellido": "Calabria",
+      "profesion": "Pepe",
+      "id": 4
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "profesion": "Ingeniero",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "nombre": "Elon",
+      "apellido": "Musk",
+      "profesion": "vagabundo"
+    }
+  ]
+}
