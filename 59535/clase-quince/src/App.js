@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import Character from './container/Character.container';
 import store from './store/store';
 
-let theme = createTheme({
+const theme = createTheme({
   typography: {
     h1: {
       color: colors.blue[900],
