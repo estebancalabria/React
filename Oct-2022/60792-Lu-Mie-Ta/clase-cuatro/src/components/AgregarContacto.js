@@ -6,15 +6,17 @@ class AgregarContacto extends Component {
     }
     state = {  }
     render() { 
-        return (<button className='btn btn-success rounded-circle'
+        return (<div className='btn btn-lg btn-success shadow-lg rounded-circle mb-3 me-3'
            style={{position:"fixed", 
-           top:"85vh", 
-           left:"90vw", 
-           width:"4em", 
-           height:"4em",
+           bottom:"0", 
+           right:"0",
+           fontSize:"4em",
+           padding:0,
+           border:0,
+           width:"2em",
            zIndex:100}}>
-            +
-        </button>);
+            <span style={{position:"relative", top:"-5px"}}>+</span>
+        </div>);
     }
 }
  
