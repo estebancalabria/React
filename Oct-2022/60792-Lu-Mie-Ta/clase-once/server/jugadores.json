@@ -1,0 +1,34 @@
+{
+  "jugadores": [
+    {
+      "id": 1,
+      "camiseta": 23,
+      "nombre": "Dibu",
+      "posicion": "arquero"
+    },
+    {
+      "id": 2,
+      "camiseta": 19,
+      "nombre": "Otamendi",
+      "posicion": "defensor"
+    },
+    {
+      "id": 3,
+      "camiseta": 11,
+      "nombre": "Di Maria",
+      "posicion": "delantero"
+    },
+    {
+      "id": 4,
+      "camiseta": 9,
+      "nombre": "Messi",
+      "posicion": "delantero"
+    },
+    {
+      "nombre": "De Paul",
+      "camiseta": 7,
+      "posicion": "mediocampista",
+      "id": 5
+    }
+  ]
+}
