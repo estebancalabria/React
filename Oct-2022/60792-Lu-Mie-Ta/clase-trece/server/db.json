@@ -1,0 +1,8 @@
+{
+    "alumnos" :[
+        {"id":1, "nombre":"Ezequiel", "apellido":"Quiroga", "edad": 24},
+        {"id":2, "nombre":"Elisa", "apellido":"Luzuriaga", "edad": 20},
+        {"id":3, "nombre":"Lucas", "apellido":"Garcia", "edad":24 },
+        {"id":4, "nombre":"Camila", "apellido":"Gatto", "edad": 28}
+    ]
+}

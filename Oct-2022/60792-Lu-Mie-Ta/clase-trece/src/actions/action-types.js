@@ -1,0 +1,3 @@
+
+export const ACT_GET_ALUMNOS = "ACT_GET_ALUMNOS";
+export const ACT_ADD_ALUMNO = "ACT_ADD_ALUMNO";
