@@ -1,0 +1,6 @@
+{
+    "jugadores" : [
+        {"id":1, "nombre":"Lionel Messi", "casaca":10},
+        {"id":2, "nombre":"Dibu Martinez", "casaca":23}
+    ]
+}
