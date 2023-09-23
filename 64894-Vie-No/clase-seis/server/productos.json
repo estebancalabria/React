@@ -1,0 +1,7 @@
+{
+    "productos" : [
+        {"id":1, "nombre":"React JS Deloper", "descripcion":"Curso de React", "precio": 15000},
+        {"id":2, "nombre":"Angular JS Deloper", "descripcion":"Curso de Angular", "precio": 10000},
+        {"id":3, "nombre":"Vue JS Deloper", "descripcion":"Curso de Vue", "precio": 8000}
+    ]
+}
