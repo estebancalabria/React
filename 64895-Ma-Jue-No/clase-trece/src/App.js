@@ -2,14 +2,12 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import "bootstrap/dist/css/bootstrap.css";
 import * as Bs from "react-bootstrap";
-import Tabla from "./components/Tabla";
-import Formulario from "./components/Formulario";
-import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import TablaCanciones from "./containers/TablaCanciones";
+import FormularioAgregarCancion from "./containers/FormularioAgregarCancion";
 
 
 function App() {
-
-  
 
   return (
     <BrowserRouter>
@@ -25,28 +23,12 @@ function App() {
                 <div className="text-end">
                   <Link to="agregar">Agregar Cancion</Link>
                 </div>
-                <Tabla
-                  columnas={["nombre", "apellido"]}
-                  items={[
-                    { nombre: "Juan", apellido: "Perez" },
-                    { nombre: "Juan", apellido: "Perez" },
-                    { nombre: "Juan", apellido: "Perez" },
-                    { nombre: "Juan", apellido: "Perez" },
-                    { nombre: "Juan", apellido: "Perez" },
-                    { nombre: "Juan", apellido: "Perez" }
-                  ]} />
-
+                <TablaCanciones />
               </div>
             } />
             <Route path="agregar" element={<div>
               <h1>Nueva Cancion</h1>
-              <Formulario
-                campos={["nombre", "apellido", "documento"]}
-                onSubmit={(obj) => { 
-                  const navigate = useNavigate();
-                  navigate(-1) 
-                  }} />
-
+              <FormularioAgregarCancion />
             </div>}
             />
           </Routes>

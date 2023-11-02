@@ -1,0 +1,46 @@
+{
+  "canciones": [
+    {
+      "id": 1,
+      "nombre": "Lunes por la madrugada",
+      "artista": "Los abuelos de la nada",
+      "genero": "Rock"
+    },
+    {
+      "id": 2,
+      "nombre": "Time",
+      "artista": "Pink Foyd",
+      "genero": "Rock"
+    },
+    {
+      "id": 3,
+      "nombre": "Constumbres Argentinas",
+      "artista": "Los abuelos de la nada",
+      "genero": "Rock"
+    },
+    {
+      "id": 4,
+      "nombre": "Giros",
+      "artista": "Fito Paez",
+      "genero": "Rock"
+    },
+    {
+      "nombre": "We are the Champions",
+      "artista": "Queen",
+      "genero": "Rock",
+      "id": 5
+    },
+    {
+      "nombre": "dsds",
+      "artista": "adsds",
+      "genero": "asdds",
+      "id": 6
+    },
+    {
+      "nombre": "sdfsdf",
+      "artista": "y5364",
+      "genero": "sdffd",
+      "id": 7
+    }
+  ]
+}
