@@ -35,7 +35,7 @@ function App() {
             />
             <Route path="modificar/:id" element={
               <Fade right>
-                 <h1>Modificar Cancion</h1>
+                <h1>Modificar Cancion</h1>
                 <FormularioModificarCancion />
               </Fade>
             } />

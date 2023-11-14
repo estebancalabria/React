@@ -1,0 +1,8 @@
+{
+    "personas" : [
+        {"id":1, "nombre":"Elon", "apellido": "Musk", "profesion" : "Desarrollador"},
+        {"id":2, "nombre":"John", "apellido": "Wick", "profesion" : "Administrador"},
+        {"id":3, "nombre":"Leo", "apellido": "Messi", "profesion" : "Jugador"},
+        {"id":4, "nombre":"Jeff", "apellido": "Bezos", "profesion" : "Inversor"}
+    ]
+}

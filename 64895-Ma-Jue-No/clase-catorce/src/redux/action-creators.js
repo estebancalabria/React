@@ -1,5 +1,9 @@
 import axios from "axios";
-import { ACT_ADD_CANCION, ACT_ELIMINAR_CANCION, ACT_MODIFICAR_CANCION } from "./action-types";
+import {
+    ACT_ADD_CANCION,
+    ACT_ELIMINAR_CANCION,
+    ACT_MODIFICAR_CANCION
+} from "./action-types";
 
 //thunk => Es una funcion que devuelve un dispatch
 const crearAccion = {
@@ -35,9 +39,9 @@ const crearAccion = {
         axios.put("http://localhost:3001/canciones/" + cancion.id, cancion)
             .then((resp) => {
                 dispatch({
-                    type : ACT_MODIFICAR_CANCION,   
-                    data : cancion
-                })             
+                    type: ACT_MODIFICAR_CANCION,
+                    data: cancion
+                })
             })
     }
 }
